@@ -18,7 +18,9 @@
 
 
     </p>
-<jsp:forward page="riderected.jsp"></jsp:forward>
+<jsp:forward page="riderected.jsp">
+    <jsp:param name="myParam" value="my parametr"/>
+</jsp:forward>
 
 </body>
 </html>
