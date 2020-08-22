@@ -18,6 +18,7 @@
 
 
     </p>
+<jsp:forward page="riderected.jsp"></jsp:forward>
 
 </body>
 </html>
