@@ -25,6 +25,7 @@
        </label>
        <input type="submit" value="Wyślij"/>
    </form>
+<a href="http://localhost:8082/search.jsp?query=Java&page=56&sort=desc">link</a>
 
 </body>
 </html>
