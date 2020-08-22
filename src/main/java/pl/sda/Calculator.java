@@ -1,10 +1,12 @@
 package pl.sda;
 
+import lombok.Getter;
 import lombok.Setter;
 
 public class Calculator {
-    @Setter
-    private int n;
+
+    @Getter
+    private int n=5;
 
 
 
