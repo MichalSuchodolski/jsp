@@ -8,10 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Hello word</title>
+    <title>Dzisiaj jest...</title>
 </head>
 <body>
-    <h1><% out.print("Hello world"); %></h1>
+    <p>
+        Dzisiaj jest <%= java.time.LocalDate.now().toString() %>
+    </p>
 
 </body>
 </html>
