@@ -1,4 +1,5 @@
-<%@ page import="java.util.Date" %><%--
+<%@ page import="java.util.Date" %>
+<%@ page import="javax.xml.crypto.Data" %><%--
   Created by IntelliJ IDEA.
   User: micha
   Date: 23.08.2020
@@ -13,6 +14,8 @@
 <body>
 <%
     Integer userId = (Integer) session.getAttribute("userId");
+    Date creationTime = new Date(session.getCreationTime());
+    Date lastAccessTime = new Date(session.getLastAccessedTime());
 
 %>
 
@@ -24,8 +27,20 @@
         <th>Value</th>
     </tr>
     <tr>
+        <td>Sesion Id</td>
+        <td><% out.print(session.getId()); %></td>
+    </tr>
+    <tr>
         <td>userId</td>
         <td><% out.print(userId); %></td>
+    </tr>
+    <tr>
+        <td>Creation Time</td>
+        <td><% out.print(creationTime); %></td>
+    </tr>
+    <tr>
+        <td>Last Access Time</td>
+        <td><% out.print(lastAccessTime); %></td>
     </tr>
 </table>
 </body>
