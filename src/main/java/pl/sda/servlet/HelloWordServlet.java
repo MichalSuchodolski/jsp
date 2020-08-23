@@ -23,7 +23,7 @@ public class HelloWordServlet extends HttpServlet {
         PrintWriter writer = response.getWriter();
         writer.println("newParam: " + getInitParameter("newParam"));
         writer.println("Localization: " + getInitParameter("localization"));
-        RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
-        dispatcher.forward(request, response);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("empty.jsp");
+        dispatcher.include(request, response);
     }
 }
