@@ -21,5 +21,6 @@ public class HelloWordServlet extends HttpServlet {
         PrintWriter writer = response.getWriter();
         writer.println("newParam: " + getInitParameter("newParam"));
         writer.println("Localization: " + getInitParameter("localization"));
+        response.sendRedirect("index.jsp");
     }
 }
