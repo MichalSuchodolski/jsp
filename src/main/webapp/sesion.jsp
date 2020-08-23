@@ -29,6 +29,7 @@
     <tr>
         <td>Sesion Id</td>
         <td><% out.print(session.getId()); %></td>
+
     </tr>
     <tr>
         <td>userId</td>
