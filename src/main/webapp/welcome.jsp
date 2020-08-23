@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: micha
+  User: michal
   Date: 22.08.2020
   Time: 10:46
   To change this template use File | Settings | File Templates.
@@ -11,21 +11,16 @@
 
 <html>
 <head>
-    <title>Search</title>
+    <title>Osługa Sesji</title>
 </head>
 <body>
-   <form action="search.jsp" method="post">
-       <label>Szukane słowo<input type="text" name="query"></label><br/>
-       <label>Strona nr <input type="text" name="page"></label><br/>
-       <label>Sortowanie
-           <select name="sort"><br/>
-               <option value="asc">rosnąco</option>
-               <option value="desc">malejąco</option>
-           </select>
-       </label>
-       <input type="submit" value="Wyślij"/>
-   </form>
-<a href="http://localhost:8082/search.jsp?query=Java&page=56&sort=desc">link</a>
+<h2>Obsługa Sesji</h2>
+<%
+    request.getSession().invalidate();
+    HttpSession newSession = request.getSession(true);
+    newSession.setAttribute("userId" , 123456);
+%>
+<a href="sesion.jsp">session...</a>
 
 </body>
 </html>
